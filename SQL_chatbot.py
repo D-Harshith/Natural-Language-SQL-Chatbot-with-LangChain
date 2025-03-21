@@ -21,8 +21,8 @@ OPENAI_API_BASE = os.getenv("OPENAI_API_BASE")
 OPENAI_API_VERSION = os.getenv("OPENAI_API_VERSION")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
-# Initialize the database connection
-db_url = "mysql+mysqlconnector://root:1234@localhost:3306/Chinook"
+# Initialize the database connection. Replace username and password
+db_url = "mysql+mysqlconnector://username:password@localhost:3306/Chinook"
 db = SQLDatabase.from_uri(db_url)
 
 # Function to extract schema information
