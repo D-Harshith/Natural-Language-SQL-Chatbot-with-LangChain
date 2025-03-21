@@ -1,5 +1,3 @@
-Here’s a comprehensive `README.md` file for the database schema you provided, which is based on the **Chinook Database**. This README includes details about the database structure, relationships, and usage instructions.
-
 ---
 
 # Chinook Database Schema
