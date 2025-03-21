@@ -22,6 +22,7 @@ OPENAI_API_VERSION = os.getenv("OPENAI_API_VERSION")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # Initialize the database connection. Replace username and password
+# mysql+mysqlconnector://<username>:<password>@<host>:<port>/<database>
 db_url = "mysql+mysqlconnector://username:password@localhost:3306/Chinook"
 db = SQLDatabase.from_uri(db_url)
 

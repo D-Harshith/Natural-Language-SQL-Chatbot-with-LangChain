@@ -28,8 +28,7 @@ This project demonstrates an **AI-powered chatbot** that allows users to query a
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your_username/sql-chatbot.git
-cd sql-chatbot
+git clone https://github.com/D-Harshith/Natural-Language-SQL-Chatbot-with-LangChain.git
 ```
 
 ### 2. Install Dependencies
@@ -57,7 +56,7 @@ The project uses the `Chinook` MySQL database. Follow these steps to set it up:
 
 #### Option 1: Import from SQL Dump
 1. Install MySQL on your system if not already installed.
-2. Import the `Chinook.sql` file into your MySQL server:
+2. Import the `Chinook_MySql.sql` file into your MySQL server:
    ```bash
    mysql -u root -p1234 < database/Chinook.sql
    ```
@@ -96,8 +95,6 @@ OPENAI_API_BASE=<your_api_base>
 OPENAI_API_VERSION=<your_api_version>
 OPENAI_API_KEY=<your_api_key>
 ```
-
-> **Warning**: Do not upload your `.env` file to GitHub or any public repository.
 
 ---
 
