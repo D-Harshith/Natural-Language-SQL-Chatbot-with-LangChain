@@ -20,7 +20,6 @@ This project demonstrates an **AI-powered chatbot** that allows users to query a
 5. [Running the App](#running-the-app)
 6. [Example Queries](#example-queries)
 7. [Directory Structure](#directory-structure)
-8. [Contributing](#contributing)
 
 ---
 
@@ -145,10 +144,3 @@ sql-chatbot/
 │   └── README.md          # Instructions for setting up the database
 └── .gitignore             # Files to exclude from GitHub
 ```
-
----
-
-## Contributing
-Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your changes.
-
----
