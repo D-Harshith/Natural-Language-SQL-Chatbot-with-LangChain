@@ -1,4 +1,6 @@
 # Import necessary libraries
+# This file accepts questions in natural language and provides answers in natural language.
+
 import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
