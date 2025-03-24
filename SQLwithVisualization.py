@@ -1,4 +1,7 @@
 # Import necessary libraries
+
+# This file accepts questions in natural language, provides responses in natural language, and also generates appropriate visualizations (such as line charts, bar graphs, or pie charts) based on the question.
+
 import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
