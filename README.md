@@ -1,14 +1,14 @@
-
 # SQL Chatbot: AI-Powered Natural Language Querying for Databases
 
-This project demonstrates an **AI-powered chatbot** that allows users to query a SQL database using **natural language questions**. The chatbot leverages **LangChain**, **Azure OpenAI**, and **Streamlit** to generate SQL queries, execute them on the database, and provide natural language responses.
+This project demonstrates an **AI-powered chatbot** that allows users to query a SQL database using **natural language questions**. Leveraging **LangChain**, **Azure OpenAI**, and **Streamlit**, the chatbot generates SQL queries, executes them on the database, and provides responses in natural language, with optional visualizations.
 
 ## Features
 - Converts natural language questions into SQL queries.
 - Executes queries on a MySQL database (`Chinook` dataset).
 - Provides human-readable responses in natural language.
+- Optional dynamic visualizations (e.g., line charts, bar graphs, pie charts) based on query results.
 - Built with **Azure OpenAI** for advanced NLP capabilities.
-- Easy-to-use interface powered by **Streamlit**.
+- User-friendly interface powered by **Streamlit**.
 
 ---
 
@@ -68,8 +68,10 @@ The following Python libraries are required:
 - `openai`
 - `mysql-connector-python`
 - `python-dotenv`
+- `pandas` (for visualization support)
+- `plotly` (for visualization support)
 
-You can install all dependencies using:
+Install all dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
@@ -91,12 +93,23 @@ OPENAI_API_KEY=<your_api_key>
 ---
 
 ## Running the App
-To run the app locally, use the following command:
-```bash
-streamlit run SQL_chatbot.py
-```
+The project includes two main scripts:
 
-Once the app starts, open your browser and navigate to `http://localhost:8501`. You will see the chatbot interface where you can ask questions about the database.
+1. **`SQL_chatbot.py`**  
+   - **Description**: This file accepts questions in natural language and provides answers in natural language.  
+   - **Run Command**:
+     ```bash
+     streamlit run SQL_chatbot.py
+     ```
+
+2. **`SQLwithVisualization.py`**  
+   - **Description**: This file accepts questions in natural language, provides responses in natural language, and generates appropriate visualizations (such as line charts, bar graphs, or pie charts) based on the question.  
+   - **Run Command**:
+     ```bash
+     streamlit run SQLwithVisualization.py
+     ```
+
+Once the app starts, open your browser and navigate to `http://localhost:8501` to interact with the chatbot interface.
 
 ---
 
@@ -106,13 +119,16 @@ Here are some example questions you can ask the chatbot:
 1. **"How many artists are there?"**
    - SQL Query: `SELECT COUNT(*) AS NumberOfArtists FROM artist;`
    - Response: `"There are a total of 275 artists in the database."`
+   - Visualization (in `SQLwithVisualization.py`): Single-bar chart.
 
 2. **"How many employees are there?"**
    - SQL Query: `SELECT COUNT(*) AS NumberOfEmployees FROM employee;`
    - Response: `"There are a total of 8 employees in the database."`
+   - Visualization (in `SQLwithVisualization.py`): Single-bar chart.
 
-3. **"Print the table names in the database."**
-   - Response: `"The database contains the following tables: album, artist, customer, employee, genre, invoice, invoiceline, mediatype, playlist, playlisttrack, and track."`
+3. **"What percentage of total sales revenue comes from each genre?"**
+   - Response: `"The sales revenue is distributed across various music genres, with Rock leading at approximately 35.50% of total sales..."`  
+   - Visualization (in `SQLwithVisualization.py`): Pie chart showing genre percentages.
 
 ---
 
@@ -122,7 +138,8 @@ sql-chatbot/
 ├── .env                   # Environment variables (DO NOT UPLOAD THIS TO GITHUB)
 ├── requirements.txt       # List of dependencies
 ├── README.md              # Documentation for your project
-├── SQL_chatbot.py         # Main Python script
+├── SQL_chatbot.py         # Script for natural language queries and responses
+├── SQLwithVisualization.py # Script for queries, responses, and visualizations
 ├── database/              # Folder for database-related files
 │   ├── Chinook.sql        # SQL dump of the Chinook database schema/data
 │   └── README.md          # Instructions for setting up the database
@@ -131,7 +148,7 @@ sql-chatbot/
 
 ---
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+## Contributing
+Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your changes.
 
 ---
