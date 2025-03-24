@@ -54,15 +54,7 @@ OPENAI_API_KEY=<your_api_key>
 ### 4. Database Setup
 The project uses the `Chinook` MySQL database. Follow these steps to set it up:
 
-#### Option 1: Import from SQL Dump
-1. Install MySQL on your system if not already installed.
-2. Import the `Chinook_MySql.sql` file into your MySQL server:
-   ```bash
-   mysql -u root -p1234 < database/Chinook.sql
-   ```
-
-#### Option 2: Use an Existing Database
-If you’re using a different database, update the `db_url` variable in `SQL_chatbot.py`:
+#### Use an Existing Database
 ```python
 db_url = "mysql+mysqlconnector://<username>:<password>@<host>:<port>/<database>"
 ```
@@ -136,16 +128,6 @@ sql-chatbot/
 │   └── README.md          # Instructions for setting up the database
 └── .gitignore             # Files to exclude from GitHub
 ```
-
----
-
-## Contributing
-Contributions are welcome! If you’d like to improve this project, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature-name`).
-3. Commit your changes (`git commit -m "Add your feature"`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a pull request.
 
 ---
 
